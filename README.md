@@ -1,1 +1,1 @@
-# Privacy-Policy---Doc-Scanner-Pro-App
+# Privacy-Policy -Doc-Scanner-Pro-App
