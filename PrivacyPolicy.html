@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Privacy Policy &amp; Security — DocScanner Pro by JamSoftwares</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: light-dark(oklch(0.98 0.006 255), oklch(0.15 0.015 255));
+      --surface: light-dark(oklch(1 0 0), oklch(0.20 0.018 255));
+      --surface-subtle: light-dark(oklch(0.955 0.012 255), oklch(0.24 0.02 255));
+      --border: light-dark(oklch(0.89 0.015 255), oklch(0.31 0.02 255));
+      --text: light-dark(oklch(0.19 0.02 255), oklch(0.95 0.01 255));
+      --text-muted: light-dark(oklch(0.46 0.02 255), oklch(0.74 0.015 255));
+      --brand: light-dark(oklch(0.54 0.21 258), oklch(0.72 0.16 255));
+      --brand-soft: light-dark(oklch(0.93 0.04 258), oklch(0.28 0.07 258));
+      --accent: light-dark(oklch(0.60 0.15 168), oklch(0.76 0.15 168));
+      --accent-soft: light-dark(oklch(0.94 0.04 168), oklch(0.27 0.06 168));
+      --radius-lg: 22px;
+      --radius-md: 14px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: clamp(1rem, 3vw, 2.75rem) clamp(1rem, 4vw, 2rem);
+    }
+
+    .page-shell {
+      max-width: 880px;
+      margin-inline: auto;
+      container-type: inline-size;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--brand-soft), var(--surface) 68%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      margin-block-end: 1.5rem;
+
+      & h1 {
+        font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 0.75rem 0 0.5rem;
+      }
+
+      & p {
+        color: var(--text-muted);
+        margin: 0;
+      }
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid color-mix(in oklch, var(--accent) 28%, transparent);
+    }
+
+    .pill-brand {
+      background: var(--brand-soft);
+      color: var(--brand);
+      border-color: color-mix(in oklch, var(--brand) 28%, transparent);
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-block-end: 1.5rem;
+    }
+
+    @container (min-width: 620px) {
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+      content-visibility: auto;
+      contain-intrinsic-size: auto 220px;
+
+      & h2 {
+        font-size: 1.15rem;
+        margin-block: 0 0.5rem;
+        color: var(--text);
+      }
+
+      & p, & li {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      & ul {
+        margin: 0.5rem 0 0;
+        padding-inline-start: 1.2rem;
+      }
+    }
+
+    .toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-block-top: 1.25rem;
+    }
+
+    button {
+      appearance: none;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+
+      &:hover {
+        background: var(--surface-subtle);
+        border-color: var(--brand);
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--brand);
+        outline-offset: 2px;
+      }
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: oklch(0.99 0 0);
+      border-color: transparent;
+
+      &:hover {
+        background: color-mix(in oklch, var(--brand) 88%, black);
+      }
+    }
+
+    /* Native Baseline Accordion (<details name="...">) */
+    .faq-stack {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.2rem;
+
+      & summary {
+        font-weight: 600;
+        cursor: pointer;
+        list-style-position: inside;
+      }
+
+      & p {
+        margin: 0.65rem 0 0;
+        color: var(--text-muted);
+        font-size: 0.93rem;
+      }
+    }
+
+    /* Native Baseline <dialog> & [popover] with @starting-style entry transitions */
+    dialog, [popover] {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      max-width: min(500px, 92vw);
+      box-shadow: 0 20px 50px oklch(0 0 0 / 0.28);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition: opacity 200ms ease, transform 200ms ease,
+                  overlay 200ms allow-discrete, display 200ms allow-discrete;
+    }
+
+    @starting-style {
+      dialog[open], [popover]:popover-open {
+        opacity: 0;
+        transform: translateY(8px) scale(0.97);
+      }
+    }
+
+    dialog::backdrop {
+      background: oklch(0.1 0.02 255 / 0.55);
+      backdrop-filter: blur(4px);
+    }
+
+    footer {
+      text-align: center;
+      margin-block-start: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 0.85em;
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+      background: var(--surface-subtle);
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div class="badge-row">
+        <span class="pill">0 SERVER UPLOAD DATA (0 Bytes)</span>
+        <span class="pill">100% Offline &amp; Private</span>
+        <span class="pill pill-brand">Owned by JamSoftwares</span>
+        <span class="pill">Zero Telemetry (DISABLE_TELEMETRY=1)</span>
+      </div>
+      <h1>Privacy Policy — Smart DocScanner Pro</h1>
+      <p>
+        <strong>Package:</strong> <code>com.kums.smartdocscanner</code> &bull;
+        <strong>Owner &amp; Publisher:</strong> JamSoftwares &bull;
+        <strong>Updated:</strong> November 16, 2026
+      </p>
+      <div class="toolbar-actions">
+        <button type="button" class="btn-primary" onclick="document.getElementById('perm-dialog').showModal()">
+          Inspect OS Permissions
+        </button>
+        <button type="button" popovertarget="telemetry-popover">
+          Verify Zero-Telemetry Architecture
+        </button>
+      </div>
+    </header>
+
+    <section class="bento-grid" aria-label="Core Privacy Guarantees">
+      <article class="card">
+        <h2>1. Ownership &amp; Zero Data Collection</h2>
+        <p>
+          Smart DocScanner Pro belongs to <strong>JamSoftwares</strong> and is developed as a strictly offline-first
+          document scanner and PDF studio. JamSoftwares <strong>does not collect, transmit, store, or sell</strong>
+          any personal information, scanned documents, photos, e-signatures, OCR text, or telemetry.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>2. On-Device AI Vision &amp; OCR</h2>
+        <p>
+          Multi-hypothesis document boundary detection, shadow-removal readability enhancement, Optical Character
+          Recognition (OCR), and QR/barcode scanning run 100% locally on your Android processor with zero cloud uploads.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>3. Scoped Access &amp; Minimal Permissions</h2>
+        <ul>
+          <li><strong>Camera:</strong> Used solely while actively scanning pages, ID cards, books, or QR codes.</li>
+          <li><strong>Biometrics:</strong> Delegated to Android OS <code>BiometricPrompt</code> hardware keystore.</li>
+          <li><strong>Files &amp; Photos:</strong> Uses Android Photo Picker &amp; SAF without broad storage permissions.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>4. User-Controlled Exports &amp; Encryption</h2>
+        <p>
+          Documents remain inside private app storage until you explicitly tap Share, Save to Downloads/Gallery,
+          Print, or Export Portable ZIP Backup. Standard 128-bit PDF encryption runs locally on device.
+        </p>
+      </article>
+    </section>
+
+    <section class="faq-stack" aria-label="Frequently Asked Questions">
+      <details name="privacy-faq" open>
+        <summary>Does DocScanner Pro send analytics or crash telemetry?</summary>
+        <p>No. Telemetry is completely disabled by design (<code>disable_telemetry=1</code>). No third-party ad SDKs or analytics trackers are bundled in the APK/AAB.</p>
+      </details>
+      <details name="privacy-faq">
+        <summary>Children's Privacy Compliance</summary>
+        <p>Because the application collects zero personal data from any user, JamSoftwares does not knowingly or unknowingly collect data from children under 13.</p>
+      </details>
+      <details name="privacy-faq">
+        <summary>Contact JamSoftwares</summary>
+        <p>For questions regarding this Privacy Policy or Smart DocScanner Pro, contact JamSoftwares via the developer support email listed on Google Play.</p>
+      </details>
+    </section>
+
+    <dialog id="perm-dialog" aria-labelledby="perm-dialog-title">
+      <h2 id="perm-dialog-title" style="margin-top:0">Android Manifest Permission Audit</h2>
+      <p style="color:var(--text-muted)">Smart DocScanner Pro requests only two hardware capabilities and zero background or storage permissions:</p>
+      <ul>
+        <li><code>android.permission.CAMERA</code> — Live document &amp; QR capture</li>
+        <li><code>android.permission.USE_BIOMETRIC</code> — Optional fingerprint/face lock</li>
+      </ul>
+      <form method="dialog" style="margin-top:1.25rem; text-align:end">
+        <button type="submit" class="btn-primary">Close</button>
+      </form>
+    </dialog>
+
+    <div id="telemetry-popover" popover>
+      <h3 style="margin-top:0">Zero-Telemetry Guarantee</h3>
+      <p style="color:var(--text-muted); margin-bottom:0">
+        Built with <code>disable_telemetry=1</code>. Smart DocScanner Pro makes zero background network requests for analytics, profiling, or usage tracking.
+      </p>
+    </div>
+
+    <footer>
+      &copy; 2026 <strong>JamSoftwares</strong>. This application belongs to JamSoftwares. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
